@@ -1,6 +1,6 @@
 # app/services/jwt_service.py
 from builtins import dict, str
-import jwt
+import jwt # type: ignore
 from datetime import datetime, timedelta
 from settings.config import settings
 
