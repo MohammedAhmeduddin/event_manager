@@ -2,21 +2,45 @@
 
 Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Developer and a student in software engineering, you are embarking on an exciting journey to contribute to our project aimed at developing a secure, robust REST API that supports JWT token-based OAuth2 authentication. This API serves as the backbone of our user management system and will eventually expand to include features for event management and registration.
 
-## Assignment Objectives
+## Issue resolved:
 
-1. **Familiarize with REST API functionality and structure**: Gain hands-on experience working with a REST API, understanding its endpoints, request/response formats, and authentication mechanisms.
+1. **Min password length as 8 char**: Enhanced password validation by adding a password_min_length function to ensure that user passwords comply with security best practices. This function enforces a minimum password length of 8 characters, preventing the use of overly short and insecure passwords. This improvement strengthens user account security by aligning with modern password policy standards.
 
-2. **Implement and refine documentation**: Critically analyze and improve existing documentation based on issues identified in the instructor videos. Ensure that the documentation is up-to-date and accurately reflects the current state of the software.
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/1-min-password-length-as-8-char
 
-3. **Engage in manual and automated testing**: Develop comprehensive test cases and leverage automated testing tools like pytest to push the project's test coverage towards 90%. Gain experience with different types of testing, such as unit testing, integration testing, and end-to-end testing.
+2. **remove duplicate login endpoint**: Simplified the user route by removing the redundant login endpoint, ensuring there is only a single login route. This change reduces redundancy, improves maintainability, and prevents potential inconsistencies in login logic.
 
-4. **Explore and debug issues**: Dive deep into the codebase to investigate and resolve issues related to user profile updates and OAuth token generation. Utilize debugging tools, interpret error messages, and trace the flow of execution to identify the root cause of problems.
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/5-remove-duplicate-logic-endpoint
 
-5. **Collaborate effectively**: Experience the power of collaboration using Git for version control and GitHub for code reviews and issue tracking. Work with issues, branches, create pull requests, and merge code while following best practices.
+3. **exceptions logs are missing**: Addressed the absence of exception logs in user routes by integrating logging functionality. This ensures that all exceptions are captured and logged, improving traceability, debugging, and monitoring of user-related operations.
+
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/7-exceptions-logs-are-missing
+
+4. **Refactored jwt Service**: The code was refactored to improve **readability**, **functionality**, and **maintainability**. Detailed **docstrings** were added for better documentation. The `decode_token` function now includes error handling to safely manage invalid tokens. Logic was simplified for clarity, and explicit algorithm specifications enhance security. These changes make the code more robust, user-friendly, and easier to maintain or extend.
+
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/9-refactored-jwt-service
+
+
+5. **Added logging Functionality in email service**: The refactored code enhances the original by incorporating detailed logging and robust error handling to improve monitoring and debugging. Logging is added at key stages, such as service initialization, email template rendering, and sending, providing visibility into operations. It logs specific details like email type and recipient, making it easier to track actions and diagnose issues. Error handling is strengthened with `try-except` blocks to catch and log failures during template rendering or email sending, ensuring clear error messages with contextual information. These changes make the service more reliable, maintainable, and transparent for developers.
+
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/12-logging-functionality-in-email_service
+
+6. **Min password length as 8 char**: The refactored code adds **password validation** to enforce strong security requirements, ensuring passwords contain uppercase, lowercase, special characters, and numbers. It also includes detailed logging for monitoring key operations and robust error handling to log and manage failures during email rendering or sending. These updates enhance security, reliability, and maintainability.
+
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/14-password-complex-requirements-such-as-upper-case-lowercase-special-char-and-one-number-for-password
+
+
+7. **Nickname Mismatch in User Creation**: Resolved Nickname Mismatch in User Creation: Fixed an issue where provided nicknames were overwritten during user creation. Ensured that valid and unique nicknames are used directly, while generating new unique nicknames only when required. Improved logging for better visibility of nickname conflicts.
+
+link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/17-nickname-mismatch-in-user-creation
+
+Docker Image:
+![alt text](<Screenshot 2024-12-05 at 11.50.48 PM.png>)
+
 
 ## Setup and Preliminary Steps
 
-1. **Fork the Project Repository**: Fork the [project repository](https://github.com/yourusername/event_manager) to your own GitHub account. This creates a copy of the repository under your account, allowing you to work on the project independently.
+1. **Fork the Project Repository**: Fork the [project repository](https://github.com/kaw393939/event_manager) to your own GitHub account. This creates a copy of the repository under your account, allowing you to work on the project independently.
 
 2. **Clone the Forked Repository**: Clone the forked repository to your local machine using the `git clone` command. This creates a local copy of the repository on your computer, enabling you to make changes and run the project locally.
 
@@ -37,43 +61,6 @@ Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Devel
 2. **Create Branches**: For each issue or task you work on, create a new branch with a descriptive name using the `git checkout -b` command. Branching allows you to work on different features or fixes independently without affecting the main codebase. It enables parallel development and helps maintain a stable main branch.
 
 3. **Pull Requests and Code Reviews**: When you have completed work on an issue, create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to merge your changes into the main branch. Pull requests provide an opportunity for code review, where your team members can examine your changes, provide feedback, and suggest improvements. Code reviews help maintain code quality, catch potential issues, and promote knowledge sharing among the team.
-
-## Specific Issues to Address
-
-In this assignment, you will identify, document, and resolve five specific issues related to:
-
-1. **Username validation**: Investigate and resolve any issues related to username validation. This may involve handling special characters, enforcing length constraints, or ensuring uniqueness. Proper username validation is essential to maintain data integrity and prevent potential security vulnerabilities.
-
-2. **Password validation**: Ensure that password validation follows security best practices, such as enforcing minimum length, requiring complexity (e.g., a mix of uppercase, lowercase, numbers, and special characters), and properly hashing passwords before storing them in the database. Robust password validation protects user accounts and mitigates the risk of unauthorized access.
-
-3. **Profile field edge cases**: Test and handle various scenarios related to updating profile fields. This may include updating the bio and profile picture URL simultaneously or individually. Consider different combinations of fields being updated and ensure that the API handles these cases gracefully. Edge case testing helps uncover potential issues and ensures a smooth user experience.
-
-Additionally, you will resolve a sixth issue demonstrated in the instructor video. These issues will test various combinations and scenarios to simulate real-world usage and potential edge cases. By addressing these specific issues, you will gain experience in identifying and resolving common challenges in API development.
-
-## Submission Requirements
-
-To complete this assignment, submit the following:
-
-1. **GitHub Repository Link**: Ensure that your repository is well-organized and includes:
-  - Links to five closed issues, each with accompanying test code and necessary application code modifications.
-  - Each issue should be well-documented, explaining the problem, the steps taken to resolve it, and the outcome. Proper documentation helps others understand your work and facilitates future maintenance.
-  - All issues should be merged into the main branch, following the Git workflow and best practices.
-
-2. **Updated README**: Replace the existing README with:
-  - Links to the closed issues, providing easy access to your work.
-  - Link to project image deployed to Dockerhub.
-  - A 2-3 paragraph reflection on what you learned from this assignment, focusing on both technical skills and collaborative processes. Reflect on the challenges you faced, the solutions you implemented, and the insights you gained. This reflection helps solidify your learning and provides valuable feedback for improving the assignment in the future.
-
-## Grading Rubric
-
-| Criteria                                                                                                                | Points |
-|-------------------------------------------------------------------------------------------------------------------------|--------|
-| Resolved 5 issues related to username validation, password validation, and profile field edge cases                      | 30     |
-| Resolved the issue demonstrated in the instructor video                                                                 | 20     |
-| Increased test coverage to 90% by writing comprehensive test cases                                                      | 20     |
-| Followed collaborative development practices using Git and GitHub (branching, pull requests, code reviews)              | 15     |
-| Submitted a well-organized GitHub repository with clear documentation, links to closed issues, and a reflective summary | 15     |
-| **Total**                                                                                                               | **100**|
 
 ## Resources and Documentation
 
@@ -106,16 +93,10 @@ To complete this assignment, submit the following:
 
 These resources will provide you with a solid foundation to understand the tools, technologies, and concepts used in the project. Don't hesitate to explore them further and consult the documentation whenever you encounter challenges or need clarification.
 
-## Conclusion
+### Evaluation
 
-This assignment is designed to challenge you, help you grow as a developer, and prepare you for the real-world responsibilities of a Software QA Analyst/Developer. By working on realistic issues, collaborating with your team, and focusing on testing and quality assurance, you will gain valuable experience that will serve you throughout your career.
+This assignment provided a substantial opportunity to enhance technical expertise in secure software development and system reliability. Implementing features such as enforcing password complexity requirements (e.g., minimum length, special characters, and case sensitivity) demonstrated the importance of adhering to security best practices in user authentication. Refactoring the JWT service to include structured error handling and explicit algorithm specifications improved the system's robustness and security. Addressing issues like duplicate login routes and nickname mismatches in user creation emphasized the value of database integrity and efficient query design to ensure consistency and scalability in multi-user environments.
 
-Remember, the goal is not just to complete the assignment but to embrace the learning journey. Take the time to understand the codebase, ask questions, and explore new concepts. Engage with your team members, seek feedback, and learn from their experiences. Your dedication, curiosity, and willingness to learn will be the key to your success in this role.
+The integration of detailed logging across various services, including the user routes and email services, underscored the importance of observability in modern applications. By adding logging at critical execution points and during exception handling, the system now offers better traceability and simplifies debugging processes. Refactoring and modularizing these components reinforced the importance of maintainable and extensible code, which is critical for large, collaborative codebases. Additionally, working with unique constraints in the database, especially for nicknames, highlighted the necessity of validating inputs dynamically to avoid runtime conflicts.
 
-We are excited to have you on board and look forward to seeing your contributions to the project. Your fresh perspective and skills will undoubtedly make a positive impact on our team and the quality of our software.
-
-If you have any questions or need assistance, don't hesitate to reach out to your mentor or team lead. We are here to support you and ensure that you have a rewarding and enriching experience.
-
-Once again, welcome to the Event Manager Company! Let's embark on this exciting journey together and create something remarkable.
-
-Happy coding and happy learning!
+This experience also strengthened understanding of collaborative development workflows, including issue tracking, branching, and version control best practices. By isolating changes for each task and maintaining comprehensive documentation, the project achieved consistency and scalability while adhering to software development standards. Ultimately, this assignment provided hands-on experience in designing secure, maintainable, and reliable systems while addressing practical challenges in real-world development scenarios.
