@@ -34,9 +34,9 @@ link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/14-p
 
 link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/17-nickname-mismatch-in-user-creation
 
-Docker Image:
-![alt text](<Screenshot 2024-12-05 at 11.50.48 PM.png>)
-
+Docker Image and Container Screenshot:
+![alt text](<Screenshot 2024-12-06 at 1.25.58 AM.png>)
+![alt text](<Screenshot 2024-12-06 at 1.26.25 AM.png>)
 
 ## Setup and Preliminary Steps
 
