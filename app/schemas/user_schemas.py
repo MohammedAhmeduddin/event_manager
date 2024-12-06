@@ -63,10 +63,6 @@ class UserCreate(UserBase):
         if not re.search(r'[!@#$%^&*(),.?":{}|<>]', value):
             raise ValueError("Password must contain at least one special character.")
         return value
-<<<<<<< HEAD
-=======
-    
->>>>>>> updated file
     
 class UserUpdate(UserBase):
     email: Optional[EmailStr] = Field(None, example="john.doe@example.com")
