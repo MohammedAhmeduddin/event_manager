@@ -25,7 +25,7 @@ link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/9-re
 
 link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/12-logging-functionality-in-email_service
 
-6. **Min password length as 8 char**: The refactored code adds **password validation** to enforce strong security requirements, ensuring passwords contain uppercase, lowercase, special characters, and numbers. It also includes detailed logging for monitoring key operations and robust error handling to log and manage failures during email rendering or sending. These updates enhance security, reliability, and maintainability.
+6. **password validation contraints**: The refactored code adds **password validation** to enforce strong security requirements, ensuring passwords contain uppercase, lowercase, special characters, and numbers. It also includes detailed logging for monitoring key operations and robust error handling to log and manage failures during email rendering or sending. These updates enhance security, reliability, and maintainability.
 
 link to the issue: https://github.com/MohammedAhmeduddin/event_manager/tree/14-password-complex-requirements-such-as-upper-case-lowercase-special-char-and-one-number-for-password
 
